@@ -1,0 +1,121 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;700&family=Lato:wght@400;700&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Brand Colors */
+:root {
+    --brand-primary: #123456; /* Adjust colors as per brand */
+    --brand-secondary: #abcdef;
+    --brand-accent: #654321;
+}
+
+/* Typography */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+h1, h2, button {
+    font-family: 'Teko', sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: var(--brand-primary);
+    color: #fff;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+nav ul {
+    display: flex;
+    gap: 16px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* Main Container */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.movie-grid {
+    display: grid;
+    gap: 16px;
+}
+
+/* Movie Box */
+.movie-box {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+}
+
+.movie-box img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.movie-box h2 {
+    font-size: 1.5em;
+    margin: 8px 0;
+}
+
+.movie-box button {
+    background-color: var(--brand-accent);
+    color: #fff;
+    font-size: 2em;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.movie-box button:hover {
+    background-color: var(--brand-secondary);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 16px;
+    background-color: var(--brand-primary);
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (min-width: 720px) {
+    header h1 {
+        font-size: 3em;
+    }
+
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .movie-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
